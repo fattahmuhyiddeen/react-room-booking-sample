@@ -7,6 +7,28 @@
   height: 40vmin;
 }
 
+.cellContainer{
+  display: flex;
+  margin:10px;
+}
+.actionButton{
+  cursor: pointer;
+  background-color: #61dafb; 
+  border-radius:10px;
+  padding: 5px;
+}
+
+.parentContainer{
+  display:flex;
+  width:80%;
+  margin:50px;
+  flex-direction: row;
+  border-width: 5px;
+  border-radius:10px;
+  border-style:'solid';
+  /* background-color: #61dafb; */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

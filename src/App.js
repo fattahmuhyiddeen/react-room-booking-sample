@@ -1,25 +1,96 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 import logo from './logo.svg';
+import Modal from 'react-modal';
 import './App.css';
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)'
+  }
+};
+
+
 class App extends Component {
+  state = { data: {}, selectedData: null }
+  componentDidMount() {
+    axios.get("./test.json")
+      .then((result) => {
+        const data = {}
+        result.data.map((r) => {
+          if (data[r.roomTypeLabel]) {
+            data[r.roomTypeLabel].push(r)
+          } else {
+            data[r.roomTypeLabel] = [r]
+          }
+        })
+        this.setState({ data })
+      })
+      .catch((e) => alert(JSON.stringify(e)))
+  }
+
+  closeModal = () => this.setState({ selectedData: null })
   render() {
+    // console.log(this.state)
+    const content = []
+    const { data, selectedData } = this.state
+    for (const [key, value] of Object.entries(data)) {
+      content.push(<div className="parentContainer">
+        <table style={{ width: '100%' }}>
+          <tr>
+            <td style={{ verticalAlign: 'top' }}>
+              {key}
+            </td>
+            <td>
+              <table>
+                {value.map((i) => {
+                  return <tr>
+                    <td >
+                      <div className="cellContainer">
+                        <div>{JSON.stringify(i.bedTypeLabel)}</div>
+                        <div> - </div>
+                        <div>{i.boardCodeDescription}</div>
+                      </div>
+                    </td>
+                    <td >
+                      <div className="cellContainer">
+                        <div>RM {i.totalPrice}</div>
+                        <div className="actionButton" onClick={() => { this.setState({ selectedData: i }); }}>View</div>
+                      </div>
+                    </td>
+                  </tr>
+                })}
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>)
+    }
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          {content}
         </header>
+
+        <Modal
+          isOpen={selectedData}
+          onRequestClose={this.closeModal}
+          aria={{
+            labelledby: "heading",
+            describedby: "full_description"
+          }}>
+          <h1 id="heading">Alert</h1>
+          <div id="full_description">
+            <p>Description goes here.</p>
+          </div>
+        </Modal>
+
       </div>
     );
   }
