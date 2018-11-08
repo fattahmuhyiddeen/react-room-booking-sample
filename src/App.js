@@ -49,16 +49,15 @@ class App extends Component {
             <td>
               <table>
                 {value.map((i) => {
-                  return <tr>
+                  return <tr style={{ borderBottom: '' }}>
                     <td >
                       <div className="cellContainer">
-                        <div>{i.bedTypeLabel.toString()}</div>
-                        <div> - </div>
+                        <div>Bed Type : {i.bedTypeLabel.length > 0 ? i.bedTypeLabel.toString() : '-'}</div>
                         <div>{i.boardCodeDescription}</div>
                       </div>
                     </td>
                     <td >
-                      <div className="cellContainer">
+                      <div className="actionContainer">
                         <div>RM {i.totalPrice}</div>
                         <div className="actionButton" onClick={() => { this.setState({ selectedData: i }); }}>View</div>
                       </div>
@@ -84,10 +83,14 @@ class App extends Component {
             labelledby: "heading",
             describedby: "full_description"
           }}>
-          <h1 id="heading">Alert</h1>
-          <div id="full_description">
-            <p>Description goes here.</p>
-          </div>
+          {selectedData && <div>
+            <h1 id="heading">{selectedData.name} ({selectedData.groupKey})</h1>
+            <div id="full_description">
+              <p>{selectedData.description}</p>
+              <p>Accommodation : {selectedData.accommodateText}</p>
+
+            </div>
+          </div>}
           <div onClick={this.closeModal} className="closeButton">close</div>
         </Modal>
 
