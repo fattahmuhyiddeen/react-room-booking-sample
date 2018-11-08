@@ -52,7 +52,7 @@ class App extends Component {
                   return <tr>
                     <td >
                       <div className="cellContainer">
-                        <div>{JSON.stringify(i.bedTypeLabel)}</div>
+                        <div>{i.bedTypeLabel.toString()}</div>
                         <div> - </div>
                         <div>{i.boardCodeDescription}</div>
                       </div>
@@ -77,7 +77,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           {content}
         </header>
-
         <Modal
           isOpen={selectedData}
           onRequestClose={this.closeModal}
@@ -89,6 +88,7 @@ class App extends Component {
           <div id="full_description">
             <p>Description goes here.</p>
           </div>
+          <div onClick={this.closeModal} className="closeButton">close</div>
         </Modal>
 
       </div>
