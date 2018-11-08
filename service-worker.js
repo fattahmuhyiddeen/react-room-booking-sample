@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-room-booking-sample/precache-manifest.019018c1472e0fe052e346153d7dfb62.js"
+  "/react-room-booking-sample/precache-manifest.7d7bbf915810d8765f2af68d1db3113e.js"
 );
 
 workbox.clientsClaim();
