@@ -22,10 +22,11 @@ export default class App extends Component {
     } else {
       value = 0
     }
-    this.setState({ [type]: value }, () => {
-      const { adult, children, infant } = this.state
+    this.setState({ [type]: value }, this.calculateResult)
+  }
 
-    })
+  calculateResult = () => {
+    const { adult, children, infant } = this.state
   }
   render() {
     const { adult, children, infant, room } = this.state
