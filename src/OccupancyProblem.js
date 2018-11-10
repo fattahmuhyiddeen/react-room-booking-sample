@@ -15,7 +15,7 @@ export default class App extends Component {
   }
 
   onChange = (type, value) => {
-    if (value != '') {
+    if (value !== '') {
       value = parseInt(value)
       if (isNaN(value)) {
         return alert('Please enter number only')
@@ -29,9 +29,7 @@ export default class App extends Component {
   calculateResult = () => {
     const { adult, children, infant } = this.state
     let room = 0
-    if (adult == 0) {
-      room = 0
-    }
+
     if (adult >= children && adult >= infant) {
       room = Math.ceil(adult / 3)
     } else if (children > adult && children >= infant) {
@@ -58,7 +56,7 @@ export default class App extends Component {
           :
           <div>Number of room{room > 1 ? 's' : ''} can be fit in : {room}</div>
         }
-        {room == MAX_NUMBER && <div>Not enough adult to look after children / infant</div>}
+        {room === MAX_NUMBER && <div>Not enough adult to look after children / infant</div>}
       </div>
     );
   }
