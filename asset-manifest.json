@@ -1,14 +1,16 @@
 {
-  "main.css": "/react-room-booking-sample/static/css/main.fb98fce5.chunk.css",
-  "main.js": "/react-room-booking-sample/static/js/main.aa2c650c.chunk.js",
-  "main.js.map": "/react-room-booking-sample/static/js/main.aa2c650c.chunk.js.map",
-  "static/js/1.7e4acf5b.chunk.js": "/react-room-booking-sample/static/js/1.7e4acf5b.chunk.js",
-  "static/js/1.7e4acf5b.chunk.js.map": "/react-room-booking-sample/static/js/1.7e4acf5b.chunk.js.map",
+  "main.css": "/react-room-booking-sample/static/css/main.96f1dc63.chunk.css",
+  "main.js": "/react-room-booking-sample/static/js/main.a5b38caf.chunk.js",
+  "main.js.map": "/react-room-booking-sample/static/js/main.a5b38caf.chunk.js.map",
+  "static/css/1.89fcff81.chunk.css": "/react-room-booking-sample/static/css/1.89fcff81.chunk.css",
+  "static/js/1.5748a5f0.chunk.js": "/react-room-booking-sample/static/js/1.5748a5f0.chunk.js",
+  "static/js/1.5748a5f0.chunk.js.map": "/react-room-booking-sample/static/js/1.5748a5f0.chunk.js.map",
   "runtime~main.js": "/react-room-booking-sample/static/js/runtime~main.6e576131.js",
   "runtime~main.js.map": "/react-room-booking-sample/static/js/runtime~main.6e576131.js.map",
+  "static/css/1.89fcff81.chunk.css.map": "/react-room-booking-sample/static/css/1.89fcff81.chunk.css.map",
   "static/media/logo.svg": "/react-room-booking-sample/static/media/logo.5d5d9eef.svg",
-  "static/css/main.fb98fce5.chunk.css.map": "/react-room-booking-sample/static/css/main.fb98fce5.chunk.css.map",
+  "static/css/main.96f1dc63.chunk.css.map": "/react-room-booking-sample/static/css/main.96f1dc63.chunk.css.map",
   "index.html": "/react-room-booking-sample/index.html",
-  "precache-manifest.7d7bbf915810d8765f2af68d1db3113e.js": "/react-room-booking-sample/precache-manifest.7d7bbf915810d8765f2af68d1db3113e.js",
+  "precache-manifest.1a5587522bd2ebfea07716c1067936ea.js": "/react-room-booking-sample/precache-manifest.1a5587522bd2ebfea07716c1067936ea.js",
   "service-worker.js": "/react-room-booking-sample/service-worker.js"
 }
