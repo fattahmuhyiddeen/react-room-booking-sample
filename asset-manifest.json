@@ -1,7 +1,7 @@
 {
   "main.css": "/react-room-booking-sample/static/css/main.96f1dc63.chunk.css",
-  "main.js": "/react-room-booking-sample/static/js/main.a5b38caf.chunk.js",
-  "main.js.map": "/react-room-booking-sample/static/js/main.a5b38caf.chunk.js.map",
+  "main.js": "/react-room-booking-sample/static/js/main.4d0bf9c6.chunk.js",
+  "main.js.map": "/react-room-booking-sample/static/js/main.4d0bf9c6.chunk.js.map",
   "static/css/1.89fcff81.chunk.css": "/react-room-booking-sample/static/css/1.89fcff81.chunk.css",
   "static/js/1.5748a5f0.chunk.js": "/react-room-booking-sample/static/js/1.5748a5f0.chunk.js",
   "static/js/1.5748a5f0.chunk.js.map": "/react-room-booking-sample/static/js/1.5748a5f0.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/media/logo.svg": "/react-room-booking-sample/static/media/logo.5d5d9eef.svg",
   "static/css/main.96f1dc63.chunk.css.map": "/react-room-booking-sample/static/css/main.96f1dc63.chunk.css.map",
   "index.html": "/react-room-booking-sample/index.html",
-  "precache-manifest.1a5587522bd2ebfea07716c1067936ea.js": "/react-room-booking-sample/precache-manifest.1a5587522bd2ebfea07716c1067936ea.js",
+  "precache-manifest.146f750a0c6a989393b753035a35ea7c.js": "/react-room-booking-sample/precache-manifest.146f750a0c6a989393b753035a35ea7c.js",
   "service-worker.js": "/react-room-booking-sample/service-worker.js"
 }
