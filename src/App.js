@@ -2,19 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import logo from './logo.svg';
 import Modal from 'react-modal';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import "react-tabs/style/react-tabs.css";
 import './App.css';
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
-  }
-};
-
+import OccupancyProblem from './OccupancyProblem'
 
 class App extends Component {
   state = { data: {}, selectedData: null }
@@ -36,7 +27,6 @@ class App extends Component {
 
   closeModal = () => this.setState({ selectedData: null })
   render() {
-    // console.log(this.state)
     const content = []
     const { data, selectedData } = this.state
     for (const [key, value] of Object.entries(data)) {
@@ -74,7 +64,21 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          {content}
+          <Tabs>
+            <TabList>
+              <Tab>Assignment 1</Tab>
+              <Tab>Occupancy Problem</Tab>
+            </TabList>
+
+            <TabPanel>
+              <h2>Assignment 1</h2>
+              {content}
+            </TabPanel>
+            <TabPanel>
+              <h2>Occupancy Problem</h2>
+              <OccupancyProblem />
+            </TabPanel>
+          </Tabs>
         </header>
         <Modal
           isOpen={selectedData}
