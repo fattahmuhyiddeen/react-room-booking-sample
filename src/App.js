@@ -6,6 +6,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 import './App.css';
 import OccupancyProblem from './OccupancyProblem'
+import TestJS from './TestJS'
 
 class App extends Component {
   state = { data: {}, selectedData: null }
@@ -68,6 +69,7 @@ class App extends Component {
             <TabList>
               <Tab>Assignment 1</Tab>
               <Tab>Occupancy Problem</Tab>
+              <Tab>Test JS</Tab>
             </TabList>
 
             <TabPanel>
@@ -77,6 +79,10 @@ class App extends Component {
             <TabPanel>
               <h2>Occupancy Problem</h2>
               <OccupancyProblem />
+            </TabPanel>
+            <TabPanel>
+              <h2>Test JS</h2>
+              <TestJS />
             </TabPanel>
           </Tabs>
         </header>
